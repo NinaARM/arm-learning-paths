@@ -38,7 +38,7 @@ CC=/opt/homebrew/Cellar/llvm/21.1.4/bin/clang cmake -G Ninja -S . -B build-nativ
 {{< /tab >}}
 
 {{< tab header="Android phones with SME2 support" language="bash" output_lines="2-12">}}
-cmake -G Ninja  -S . -B build-android -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_TOOLCHAIN_FILE:STRING="$NDK/build/cmake/android.toolchain.cmake" -DANDROID_ABI:STRING=arm64-v8a -DANDROID_PLATFORM:STRING=android-24 -DANDROID_STL:STRING=c++_static -DCMAKE_BUILD_TYPE:STRING=Release
+cmake -G Ninja  -S . -B build-android -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_TOOLCHAIN_FILE:STRING="$NDK/build/cmake/android.toolchain.cmake" -DANDROID_ABI:STRING=arm64-v8a -DANDROID_PLATFORM:STRING=android-24 -DANDROID_STL:STRING=c++_static -DSME2_MARCH="-march=armv9.4-a+sme2" -DSME2_ASM_MARCH="-march=armv9.4-a+sme2"
 -- The C compiler identification is Clang 21.0.0
 -- The ASM compiler identification is Clang with GNU-like command-line
 -- Found assembler: .../Library/Android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang

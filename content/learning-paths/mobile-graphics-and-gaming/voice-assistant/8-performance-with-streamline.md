@@ -154,6 +154,6 @@ These measurements show how fast the model processes (encodes) 128 input tokens 
 
 ### What can Arm Streamline show?
 
-To summarize, with use of Arm Streamline you can firstly confirm that SME2 kernels are being used by your chosen framework. By looking at the timeline, you can match SME2 activity to the benchmarking phases phases. For multithreaded code, compare threads. Good signs: SME2 activity across worker threads during the compute phase. Bad signs: one active thread, gaps, or long non-SME2 regions.
+To summarize, with use of Arm Streamline you can firstly confirm that SME2 kernels are being used by your chosen framework. By looking at the timeline, you can match SME2 activity to the benchmarking phases. For multithreaded code, compare threads. Good signs: SME2 activity across worker threads during the compute phase. Bad signs: one active thread, gaps, or long non-SME2 regions.
 
 
